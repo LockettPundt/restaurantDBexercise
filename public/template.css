@@ -1,11 +1,19 @@
 html {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
+    line-height: 3vh;
 }
 
 body {
     display: flex;
     flex-direction: column;
+}
+strong {
+    width: 6vw;
+    height: 6vh;
+    padding: 0.3vw;
+    border-radius: 6%;
+    background-color: pink;
 }
 
 .restoList {
