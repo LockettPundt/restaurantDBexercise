@@ -13,7 +13,7 @@ class Review {
     }
     static async getAll() {
         try {
-            const response = await db.any(`select reviewer.name as reviewer, restaurant.name, review, title from review JOIN restaurant ON restaurant_id = restaurant.id JOIN reviewer ON reviewer_id = reviewer.id;`);
+            const response = await db.any(`select reviewer.name as reviewer, reviewer.karma, restaurant.name, review, title from review JOIN restaurant ON restaurant_id = restaurant.id JOIN reviewer ON reviewer_id = reviewer.id ORDER BY restaurant.name;`);
             console.log(response);
             return response;
         } catch (error) {
