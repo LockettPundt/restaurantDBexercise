@@ -1,0 +1,16 @@
+<select class='restoDropdown' id='restoDropdown'>
+    ${data.map(item => {
+        return `<option>${item.name}</option>`
+        }).join('')}
+</select>
+<div class="resultList">
+
+</div>
+
+
+
+<div class="restoList">
+    ${data.map(item => {
+    return `<p><a href="#">${item.name}</a> ${item.distance} miles, <span>${item.stars}</span> Star avg rating, </p>`
+    }).join('')}
+</div>

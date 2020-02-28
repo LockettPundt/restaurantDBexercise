@@ -1,0 +1,5 @@
+<div class="bestReview">
+    ${reviewData.map(item => {
+        return `<p>${item.name}, <span>${item.stars}</span> ${item.title}: ${item.review}</p>`
+        }).join('')}
+</div>
