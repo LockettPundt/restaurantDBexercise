@@ -10,10 +10,11 @@ class Reviewer {
         this.karma = karma;
     }
 
-    
+
     static async getAll() {
         try {
             const response = await db.any(`SELECT * FROM reviewers;`);
+            console.log(response);
             return response;
         } catch(error) {
             return error;
